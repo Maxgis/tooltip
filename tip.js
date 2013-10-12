@@ -33,19 +33,19 @@ function zhezhao_getPageSize() {
 	bodyOffsetHeight = body.offsetHeight;
 	bodyScrollWidth = body.scrollWidth;
 	bodyScrollHeight = body.scrollHeight;
-	if(bodyOffsetHeight < pageDimensions[0]) {
+	if(bodyOffsetHeight > pageDimensions[0]) {
 		pageDimensions[0] = bodyOffsetHeight;
 	}
 
-	if(bodyOffsetWidth < pageDimensions[1]) {
+	if(bodyOffsetWidth > pageDimensions[1]) {
 		pageDimensions[1] = bodyOffsetWidth;
 	}
 
-	if(bodyScrollHeight < pageDimensions[0]) {
+	if(bodyScrollHeight > pageDimensions[0]) {
 		pageDimensions[0] = bodyScrollHeight;
 	}
 
-	if(bodyScrollWidth < pageDimensions[1]) {
+	if(bodyScrollWidth > pageDimensions[1]) {
 		pageDimensions[1] = bodyScrollWidth;
 	}
 	return pageDimensions;

@@ -6,8 +6,8 @@
         <title>_test</title>
         <meta name="author" content="Administrator" />
         <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="tip.js"></script>
-        <link type="text/css" rel="stylesheet" href="tip.css" />
+        <script type="text/javascript" src="../tip.js"></script>
+        <link type="text/css" rel="stylesheet" href="../tip.css" />
         <!-- Date: 2012-03-23 -->
     </head>
     <script type="text/javascript">
@@ -96,6 +96,19 @@
                 });
 
             });
+            $("#diypage").bind('click', function(event) {
+                var options = {};
+                options.url = "pro.html";
+                options.height = "412";
+                options.width = "622";
+                options.id = "userpro";
+                options.moveSelector = ".up_wrapper .top";
+                options.loadComplete = function () {
+                    ppM.init();
+                };
+                $().zhezhao(options);
+
+            });
 		})
     </script>
     <style>
@@ -148,6 +161,9 @@
         </div>
         <div class="testdiv" id="complete">
             完成事件触发
+        </div>
+		<div class="testdiv" id="diypage">
+            加载自定义页面(WEB容器下执行)
         </div>
     </body>
 </html>
